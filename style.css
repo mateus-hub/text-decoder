@@ -250,3 +250,44 @@ body {
   color: green !important;
   border: 2px solid green;
 }
+
+/* Media queries */
+@media (max-width: 768px) {
+  /* Superior part */
+  .container {
+    width: 95%;
+    flex-direction: column;
+  }
+
+  .content-container {
+    width: 100%;
+  }
+
+  .text-container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-container p {
+    padding: 10px 0;
+  }
+
+  .buttons-container a {
+    padding: 24px 15%;
+    gap: 15px;
+  }
+
+  /* Inferior part */
+  .cryptography-area-container {
+    width: 95%;
+    margin-left: 25px;
+    height: 30%;
+    margin-bottom: 30px;
+  }
+
+  .img-container {
+    display: none;
+  }
+}
