@@ -12,5 +12,49 @@
     <link rel="stylesheet" href="style.css" />
     <title>Decodificador de Texto</title>
   </head>
-  <body></body>
+  <body>
+    <main class="container">
+      <section class="content-container">
+        <div class="logo-container">
+          <img src="assets/alura-logo.svg" alt="Logo da Alura" />
+        </div>
+        <div class="text-container">
+          <textarea
+            class="encrypt-text"
+            name="encrypt-input"
+            id="encrypt-input"
+            placeholder="Digite seu texto"
+          >
+          </textarea>
+          <p class="alert-disabled">
+            <img src="assets/exclamation-circle.svg" />
+            Apenas letras minúsculas
+          </p>
+        </div>
+        <div class="buttons-container">
+          <a id="encrypt" class="encrypt-btn">Criptografar</a>
+          <a id="decrypt" class="decrypt-btn">Descriptografar</a>
+        </div>
+      </section>
+      <section class="cryptography-area-container">
+        <article class="default-text-container">
+          <div class="img-container">
+            <img
+              src="assets/person-searching.svg"
+              alt="pessoa procurando mensagem"
+            />
+          </div>
+          <div class="info-message-container"> 
+            <p>Nenhuma mensagem encontrada</p>
+            <p class="descriptive-message-text"> 
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+        </article>
+        <article class="result-text-container">
+            <p class="result-message-text"></p>
+            <a id="copy" class="btn-copy">Copiar</a>
+          </article>
+      </section>
+    </main>
+  </body>
 </html>
