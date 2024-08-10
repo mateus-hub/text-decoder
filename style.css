@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+
+:root {
+  --color-background: #f3f5fc;
+  --color-text-message-black: #343a40;
+  --color-text-message-blue: #0a3871;
+  --color-button-blue: #0a3871;
+  --color-button-grey: #d8dfe8;
+
+  --primary-font: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: var(--primary-font);
+}
+
+.container {
+  width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Left side */
+.content-container {
+  width: 70%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo-container {
+  width: 100%;
+  height: 10%;
+  margin: 0 auto;
+}
+
+.logo-container img {
+  width: 15%;
+  height: 100%;
+}
+
+.text-container {
+  width: 90%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+.alert-actived {
+  color: red;
+}
+
+.encrypt-text {
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+  resize: none;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+  overflow-wrap: break-word;
+  background-color: var(--color-background);
+}
+
+.encrypt-text-alert {
+  border: 2px solid red;
+}
+
+.encrypt-text,
+.encrypt-text:focus {
+  color: var(--color-text-message-blue);
+  font-size: 32px;
+}
+
+.encrypt-text::placeholder {
+  color: var(--color-text-message-blue);
+  font-size: 32px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 40px 40px 0 40px;
+}
+
+.encrypt-btn {
+  width: 49%;
+  padding: 24px 75px;
+  background-color: var(--color-button-blue);
+  border: 2px solid var(--color-button-blue);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: white;
+  cursor: pointer;
+}
+
+.decrypt-btn {
+  width: 49%;
+  padding: 24px 75px;
+  border: 2px solid var(--color-button-blue);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-button-grey);
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: var(--color-button-blue);
+  cursor: pointer;
+}
+
+.decrypt-btn::before {
+  content: "";
+  height: 2000%;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background: white;
+  transition: 0.8s ease;
+  display: block;
+  z-index: -1;
+}
+
+.decrypt-btn:hover::before {
+  width: 90%;
+}
+
+.decrypt-btn:hover {
+  color: var(--color-button-blue);
+}
+
+.decrypt-btn:active {
+  transform: scale(0.8);
+}
+
+/* Right side */
+.cryptography-area-container {
+  width: 30%;
+  margin-right: 30px;
+  min-width: 300px;
+  height: 85%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+/* Message default | area that the decoded text will appear */
+.default-text-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-message-container {
+  text-align: center;
+  color: var(--color-text-message-black);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.descriptive-message-text {
+  margin-top: 16px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+/* Right part when encrypting and decrypting */
+.result-text-container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  word-wrap: break-word;
+}
+
+.result-message-text {
+  width: 100%;
+  line-height: 150%;
+  color: #495057;
+}
+
+.btn-copy {
+  width: 95%;
+  padding: 24px 75px;
+  border: 2px solid var(--color-button-blue);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-button-grey);
+  text-align: center;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: inherit;
+  color: var(--color-button-blue);
+  cursor: pointer;
+}
+
+.btn-copy::before {
+  content: "";
+  height: 2000%;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(90deg);
+  background: white;
+  transition: 0.8s ease;
+  display: block;
+  z-index: -1;
+}
+
+.btn-copy:hover::before {
+  width: 90%;
+}
+
+.btn-copy:hover,
+.decrypt-btn:hover {
+  color: var(--color-button-blue);
+}
+
+.btn-copy:active {
+  transform: scale(0.8);
+}
+
+.btn-copied {
+  color: green !important;
+  border: 2px solid green;
+}
