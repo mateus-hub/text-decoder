@@ -291,3 +291,67 @@ body {
     display: none;
   }
 }
+
+@media (max-width: 415px) {
+  .container {
+    width: 99%;
+  }
+
+  .logo {
+    width: 20px;
+  }
+
+  .content-container {
+    padding: 5px;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 0px;
+  }
+
+  .buttons-container a {
+    padding: 20px 10%;
+    text-align: center;
+  }
+
+  .encrypt-btn {
+    width: 100%;
+  }
+
+  .decrypt-btn {
+    width: 100%;
+  }
+
+  .decrypt-btn::before {
+    height: 1100%;
+  }
+
+  .btn-copy::before {
+    height: 1000%;
+  }
+
+  .text-container {
+    width: 100%;
+  }
+
+  .encrypt-text {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .encrypt-text,
+  .encrypt-text:focus {
+    font-size: 18px;
+  }
+
+  .encrypt-text::placeholder {
+    font-size: 18px;
+  }
+
+  .cryptography-area-container {
+    width: 95%;
+    min-width: none;
+  }
+}
