@@ -12,9 +12,9 @@ encrypt.addEventListener("click", () => {
   const isValid = /([A-ZáéíóúÁÉÍÓÚñ\d$@$!%*?&])/gm.test(input);
   if (!isValid && input.length > 0) {
     const obj = {
+      a: "ai",
       e: "enter",
       i: "imes",
-      a: "ai",
       o: "ober",
       u: "ufat",
     };
@@ -37,9 +37,9 @@ decrypt.addEventListener("click", () => {
   const isValid = /([A-ZáéíóúÁÉÍÓÚñ\d$@$!%*?&])/gm.test(input);
   if (!isValid && input.length > 0) {
     const obj = {
+      ai: "a",
       enter: "e",
       imes: "i",
-      ai: "a",
       ober: "o",
       ufat: "u",
     };
